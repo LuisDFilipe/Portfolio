@@ -15,6 +15,25 @@
             text-align: center;
             padding-bottom: 20px;
         }
+            #language-toggle {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 18px;
+    }
+
+    #language-toggle span {
+      margin: 0 10px;
+      cursor: pointer;
+      padding: 5px 10px;
+    }
+
+    #language-toggle .active {
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
         h1 {
             color: #007acc;
         }
@@ -32,7 +51,10 @@
         <h1>Portfolio - Luis Pereira</h1>
         <p>Welcome to my portfolio! Here you can find some of my work and projects.</p>
     </header>
-
+<div id="language-toggle">
+    <span id="toggle-pt" onclick="setLanguage('pt')">PT</span> |
+    <span id="toggle-en" onclick="setLanguage('en')">EN</span>
+</div>
     <section id="about">
         <h2>About Me</h2>
         <p>Hello! I'm <strong>Luis Pereira</strong>, a developer passionate about building clean, user-friendly websites and applications.</p>
