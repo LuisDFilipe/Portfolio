@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
         <link rel="icon" href="assets/icon_192.png" type="image/png">
-        <link rel="manifest" href="/manifest.json">
+        <link rel="manifest" href="manifest.json">
         <meta name="theme-color" content="#000000">
         <style>
             body {
@@ -40,7 +40,7 @@
 
             //PWA
             if ("serviceWorker" in navigator) {
-                navigator.serviceWorker.register("/service-worker.js");
+                navigator.serviceWorker.register("service-worker.js");
             }
         </script>
     </head>
