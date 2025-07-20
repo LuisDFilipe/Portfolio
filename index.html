@@ -42,45 +42,6 @@
             if ("serviceWorker" in navigator) {
                 navigator.serviceWorker.register("service-worker.js");
             }
-            
-            const isIos = /iphone|ipad|ipod/.test(window.navigator.userAgent.toLowerCase());
-            const isInStandalone = ('standalone' in window.navigator) && window.navigator.standalone;
-
-            if (isIos && !isInStandalone) {
-                // Show manual iOS install instructions
-                alert("To install this app, tap the Share icon (🡇) and select 'Add to Home Screen'.");
-            } else {
-                let deferredPrompt;
-
-                window.addEventListener('beforeinstallprompt', (e) => {
-                    // Prevent the mini-infobar from appearing on mobile
-                    e.preventDefault();
-                    deferredPrompt = e;
-
-                    // Show your custom install button
-                    const installBtn = document.getElementById('install-btn');
-                    installBtn.style.display = 'inline-block';
-
-                    installBtn.addEventListener('click', () => {
-                        installBtn.style.display = 'none'; // hide again
-                        deferredPrompt.prompt();
-
-                        deferredPrompt.userChoice.then((choiceResult) => {
-                        if (choiceResult.outcome === 'accepted') {
-                            console.log('✅ User accepted the PWA install prompt');
-                        } else {
-                            console.log('❌ User dismissed the PWA install prompt');
-                        }
-                        deferredPrompt = null;
-                        });
-                    });
-                });
-
-                window.addEventListener('appinstalled', () => {
-                    console.log('📲 PWA was installed');
-                    document.getElementById('install-btn').style.display = 'none';
-                });
-            }
         </script>
     </head>
     <body>
@@ -101,15 +62,7 @@
                 <p>Experienced in designing, developing, and deploying API-led integrations using MuleSoft Anypoint Platform. Skilled in creating scalable and reusable APIs following best practices in RAML, DataWeave transformations, and error handling frameworks. Delivered robust integration solutions connecting Salesforce, SAP, databases, and REST/SOAP services across on-premise and cloud environments. Strong understanding of API lifecycle management, CI/CD deployment pipelines, and integration performance optimization. Successfully contributed to enterprise-level digital transformation projects, ensuring seamless data flow and system interoperability.</p>
             </div>
             <div class="project">
-                <h3>Project One: MES Solution</h3>
-                <p>A responsive web app for workers to interact with their factory looms, able to do almost every command they needed, like start and stop the machine, like comments on the product the machine was making.</p>
-            </div>
-            <div class="project">
-                <h3>Project Three: E-commerce Template</h3>
-                <p>A basic e-commerce front-end layout with cart features using modern JavaScript and responsive design.</p>
-            </div>
-            <div class="project">
-                <h3>Project Four: Birthday Websites</h3>
+                <h3>Portuguese Birthday Website</h3>
                 <p>Parabens: <a href="https://luisdfilipe.github.io/Parabens" target="_blank">luisdfilipe.github.io/Parabens</a></p>
             </div>
         </section>
@@ -118,10 +71,6 @@
             <h2>Contact</h2>
             <p>Email: luis.d.filipe.97@gmail.com</p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/luis-pereira-ok" target="_blank">linkedin.com/in/luis-pereira-ok</a></p>
-        </section>
-
-        <section id="install-app">
-            <button id="install-btn" style="display: none;">Install App</button>
         </section>
     </body>
 </html>
