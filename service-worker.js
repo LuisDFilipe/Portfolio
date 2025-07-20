@@ -1,7 +1,7 @@
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open("my-pwa-cache").then((cache) => {
-      return cache.addAll(["/", "/index.html", "/style.css", "/icon-192.png"]);
+      return cache.addAll(["/", "/index.html", "icon-192.png"]);
     })
   );
 });
