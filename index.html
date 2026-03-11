@@ -1,186 +1,193 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio - Luis Pereira</title>
-    <link rel="icon" href="assets/icon_192.png" type="image/png" />
-    <meta name="theme-color" content="#000000" />
-    <style>
-      /* Base Styles */
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f6f8;
-        color: #333;
-        line-height: 1.6;
-      }
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Portfolio - Luis Pereira</title>
+		<link rel="icon" href="assets/icon_192.png" type="image/png" />
+		<meta name="theme-color" content="#000000" />
+		<style>
+			/* Base Styles */
+			body {
+				font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+				margin: 0;
+				padding: 0;
+				background-color: #f4f6f8;
+				color: #333;
+				line-height: 1.6;
+			}
 
-      a {
-        color: #007acc;
-        text-decoration: none;
-      }
+			a {
+				color: #007acc;
+				text-decoration: none;
+			}
 
-      a:hover {
-        text-decoration: underline;
-      }
+			a:hover {
+				text-decoration: underline;
+			}
 
-      /* Container */
-      .container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 40px 20px;
-      }
+			/* Container */
+			.container {
+				max-width: 900px;
+				margin: 0 auto;
+				padding: 20px 20px;
+			}
 
-      /* Header */
-      header {
-        text-align: center;
-        padding-bottom: 40px;
-      }
+			/* Header */
+			header {
+				text-align: center;
+        		padding-bottom: 40px;
+			}
 
-      header h1 {
-        color: #007acc;
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-      }
+			header h1 {
+				color: #007acc;
+				font-size: 2.5rem;
+				margin-bottom: 10px;
+			}
 
-      header p {
-        font-size: 1.1rem;
-        color: #555;
-      }
+			header p {
+				font-size: 1.1rem;
+				color: #555;
+			}
 
-      /* Sections */
-      section {
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-        padding: 30px 25px;
-        margin-bottom: 30px;
-      }
+			/* Sections */
+			section {
+				background-color: #fff;
+				border-radius: 10px;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+				padding: 10px 20px;
+				margin-bottom: 25px;
+			}
 
-      section h2 {
-        color: #007acc;
-        margin-bottom: 20px;
-        border-bottom: 2px solid #007acc;
-        display: inline-block;
-        padding-bottom: 5px;
-      }
+			section h2 {
+				color: #007acc;
+				margin-top: 10px;
+				margin-bottom: 20px;
+				border-bottom: 2px solid #007acc;
+				display: inline-block;
+				padding-bottom: 5px;
+			}
 
-      /* About */
-      #about p {
-        font-size: 1.05rem;
-      }
+			/* About */
+			#about p {
+				font-size: 1.05rem;
+			}
 
-      /* Certifications */
-      .certification {
-        background: #eef6ff;
-        border-left: 5px solid #007acc;
-        padding: 15px 20px;
-        margin-bottom: 15px;
-        border-radius: 5px;
-        font-weight: bold;
-        color: #004a80;
-      }
+			/* Download CV button */
+			.btn-cv {
+				display: inline-block;
+				margin-top: 15px;
+				padding: 12px 25px;
+				background-color: #007acc;
+				color: #fff;
+				font-weight: bold;
+				border-radius: 5px;
+				text-decoration: none;
+				transition: background-color 0.3s ease, transform 0.2s ease;
+			}
 
-      /* Projects */
-      .project {
-        margin-bottom: 20px;
-        padding: 15px 20px;
-        border-left: 5px solid #007acc;
-        background-color: #f9fbfd;
-        border-radius: 5px;
-      }
+			.btn-cv:hover {
+				background-color: #93d4ff;
+				border: 1px solid #004a80;
+				color: #333;
+				transform: scale(1.1);
+				text-decoration: none;
+			}
 
-      .project h3 {
-        margin-top: 0;
-        color: #005f99;
-      }
+			/* Certifications */
+			.certification {
+				background: #eef6ff;
+				border-left: 5px solid #007acc;
+				padding: 15px 20px;
+				margin-bottom: 15px;
+				border-radius: 5px;
+				font-weight: bold;
+				color: #004a80;
+			}
 
-      /* Contact */
-      #contacts p {
-        margin: 10px 0;
-        font-size: 1rem;
-      }
+			/* Projects */
+			.project {
+				margin-bottom: 20px;
+				padding: 15px 20px;
+				border-left: 5px solid #007acc;
+				background-color: #f9fbfd;
+				border-radius: 5px;
+			}
 
-      /* Responsive */
-      @media (max-width: 600px) {
-        header h1 {
-          font-size: 2rem;
-        }
+			.project h3 {
+				margin-top: 0;
+				color: #005f99;
+			}
 
-        section {
-          padding: 20px 15px;
-        }
+			/* Contact */
+			#contacts p {
+				margin: 10px 0;
+				font-size: 1rem;
+			}
 
-        .certification,
-        .project {
-          padding: 12px 15px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <h1>Luis Pereira</h1>
-        <p>MuleSoft Developer | API Integration Specialist</p>
-      </header>
+			/* Responsive */
+			@media (max-width: 600px) {
+				header h1 {
+					font-size: 2rem;
+				}
 
-      <section id="about">
-        <h2>About Me</h2>
-        <p>
-          Hello! I'm <strong>Luis Pereira</strong>, a MuleSoft Developer
-          passionate about building scalable API-led integrations and connecting
-          systems efficiently. I specialize in designing, developing, and
-          deploying APIs using MuleSoft's Anypoint Platform to enable seamless
-          communication between applications, data sources, and services.
-        </p>
-      </section>
+				section {
+					padding: 20px 15px;
+				}
 
-      <section id="certifications">
-        <h2>Certifications</h2>
-        <div class="certification">MuleSoft Certified Developer – Level 1</div>
-        <div class="certification">MuleSoft Certified Developer – Level 2</div>
-      </section>
-
-      <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-          <h3>API-Led Customer Integration</h3>
-          <p>
-            Designed and implemented a MuleSoft API-led connectivity solution
-            integrating CRM and ERP systems using System, Process, and
-            Experience APIs.
-          </p>
-        </div>
-        <div class="project">
-          <h3>Salesforce Integration API</h3>
-          <p>
-            Built secure REST APIs using MuleSoft to synchronize customer data
-            between Salesforce and internal systems.
-          </p>
-        </div>
-        <div class="project">
-          <h3>E-commerce Order Processing Integration</h3>
-          <p>
-            Developed MuleSoft flows to process e-commerce orders and integrate
-            them with payment and inventory services.
-          </p>
-        </div>
-      </section>
-
-      <section id="contacts">
-        <h2>Contacts</h2>
-        <p>
-          Email:
-          <a href="mailto:luis.d.filipe.97@gmail.com">luis.d.filipe.97@gmail.com</a>
-        </p>
-        <p>
-          LinkedIn:
-          <a href="https://www.linkedin.com/in/luis-d-filipe" target="_blank">linkedin.com/in/luis-d-filipe</a>
-        </p>
-      </section>
-    </div>
-  </body>
+				.certification,
+				.project {
+					padding: 12px 15px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Luis Pereira</h1>
+				<p>MuleSoft Developer | API Integration Specialist</p>
+				<a href="Luis_Pereira_CV.pdf" download class="btn-cv">Download CV</a>
+			</header>
+			<section id="about">
+				<h2>About Me</h2>
+				<p> Hello! I'm <strong>Luis Pereira</strong>, a MuleSoft Developer passionate about building scalable
+					API-led integrations and connecting systems efficiently. I specialize in designing, developing, and
+					deploying APIs using MuleSoft's Anypoint Platform to enable seamless communication between
+					applications, data sources, and services. </p>
+			</section>
+			<section id="certifications">
+				<h2>Certifications</h2>
+				<div class="certification">MuleSoft Certified Developer – Level 1</div>
+				<div class="certification">MuleSoft Certified Developer – Level 2</div>
+			</section>
+			<section id="projects">
+				<h2>Projects</h2>
+				<div class="project">
+					<h3>API-Led Customer Integration</h3>
+					<p> Designed and implemented a MuleSoft API-led connectivity solution integrating CRM and ERP
+						systems using System, Process, and Experience APIs. </p>
+				</div>
+				<div class="project">
+					<h3>Salesforce Integration API</h3>
+					<p> Built secure REST APIs using MuleSoft to synchronize customer data between Salesforce and
+						internal systems. </p>
+				</div>
+				<div class="project">
+					<h3>E-commerce Order Processing Integration</h3>
+					<p> Developed MuleSoft flows to process e-commerce orders and integrate them with payment and
+						inventory services. </p>
+				</div>
+			</section>
+			<section id="contacts">
+				<h2>Contacts</h2>
+				<p>
+					Email: <a href="mailto:luis.d.filipe.97@gmail.com">luis.d.filipe.97@gmail.com</a>
+				</p>
+				<p>
+					LinkedIn: <a href="https://www.linkedin.com/in/luis-d-filipe" target="_blank">linkedin.com/in/luis-d-filipe</a>
+				</p>
+			</section>
+		</div>
+	</body>
 </html>
