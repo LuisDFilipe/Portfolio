@@ -1,12 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>
-        <link rel="icon" href="assets/icon_192.png" type="image/png">
-        <link rel="manifest" href="manifest.json">
-        <meta name="theme-color" content="#000000">
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -28,21 +25,6 @@
                 margin-bottom: 10px;
             }
         </style>
-
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RT2DVJL96J"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-RT2DVJL96J');
-
-            //PWA
-            if ("serviceWorker" in navigator) {
-                navigator.serviceWorker.register("service-worker.js");
-            }
-        </script>
     </head>
     <body>
         <header>
@@ -58,12 +40,16 @@
         <section id="projects">
             <h2>Projects</h2>
             <div class="project">
-                <h3>Mulesoft Integrations</h3>
-                <p>Experienced in designing, developing, and deploying API-led integrations using MuleSoft Anypoint Platform. Skilled in creating scalable and reusable APIs following best practices in RAML, DataWeave transformations, and error handling frameworks. Delivered robust integration solutions connecting Salesforce, SAP, databases, and REST/SOAP services across on-premise and cloud environments. Strong understanding of API lifecycle management, CI/CD deployment pipelines, and integration performance optimization. Successfully contributed to enterprise-level digital transformation projects, ensuring seamless data flow and system interoperability.</p>
+                <h3>Project One: Personal Blog</h3>
+                <p>A responsive blog site built with HTML, CSS, and JavaScript for sharing thoughts and tutorials.</p>
             </div>
             <div class="project">
-                <h3>Portuguese Birthday Website</h3>
-                <p>Parabens: <a href="https://luisdfilipe.github.io/Parabens" target="_blank">luisdfilipe.github.io/Parabens</a></p>
+                <h3>Project Two: Portfolio Website</h3>
+                <p>This personal portfolio page to showcase my projects and contact information.</p>
+            </div>
+            <div class="project">
+                <h3>Project Three: E-commerce Template</h3>
+                <p>A basic e-commerce front-end layout with cart features using modern JavaScript and responsive design.</p>
             </div>
         </section>
     
